@@ -25,7 +25,7 @@ namespace ProjektP1
             imieGraczaA = Console.ReadLine();
             Console.Write("Wpisz imię gracza B: ");
             imieGraczaB = Console.ReadLine();
-            //.....
+            
         }
     }
 }
