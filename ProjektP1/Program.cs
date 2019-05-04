@@ -14,7 +14,7 @@ namespace ProjektP1
             string imieGraczaB = "";
             char znakGraczaA = 'x';
             char znakGraczaB = 'o';
-            char[,] plansza = new char[3, 3] 
+            char[,] plansza = new char[3, 3]
             {
                 {'1', '2', '3'},
                 {'4', '5', '6'},
@@ -25,7 +25,27 @@ namespace ProjektP1
             imieGraczaA = Console.ReadLine();
             Console.Write("Wpisz imię gracza B: ");
             imieGraczaB = Console.ReadLine();
-            
+
+            bool gameOver = false;
+            while (!gameOver)
+            {
+                Console.Clear();
+                RysujPlansze(plansza);
+                Console.ReadKey();
+            }
+        }
+
+        static void RysujPlansze(char[,] plansza)
+        {
+            int height = plansza.GetLength(0);
+            int width = plansza.GetLength(1);
+
+            for (int i = 0; i < height; ++i)
+            {
+                for (int j = 0; j < width; ++j)
+                Console.Write(plansza[i, j]);
+                Console.WriteLine();
+            }
         }
     }
 }
